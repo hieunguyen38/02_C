@@ -1393,8 +1393,6 @@ void readFile() {
 
 ---
 
-<div id="bai-41"></div>
-
 <div id="bai-46"></div>
 
 ## #46. Quản lý bộ nhớ động (malloc, calloc, realloc, free)
