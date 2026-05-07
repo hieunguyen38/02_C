@@ -1,0 +1,141 @@
+# ====================================================================
+# .gitignore cho lập trình C/C++ bằng Visual Studio (Visual Studio tím)
+# Thiết kế bởi Antigravity (Google DeepMind) - Đảm bảo sạch sẽ, an toàn và tối ưu cho GitHub
+# ====================================================================
+
+# --------------------------------------------------------------------
+# 1. Thư mục cấu hình cá nhân và cache của Visual Studio (BẮT BUỘC BỎ QUA)
+# --------------------------------------------------------------------
+# Thư mục ẩn chứa cache, tab đang mở, breakpoint, cấu hình của VS
+.vs/
+# Thư mục chứa dữ liệu biên dịch trước (Precompiled Headers) của IntelliSense
+ipch/
+# Thư mục chứa file chạy thử nghiệm và trung gian (cả chữ hoa/thường)
+[Db]ebug/
+# Thư mục chứa file chạy tối ưu và trung gian
+[Rr]elease/
+# Thư mục build cho hệ điều hành 64-bit
+x64/
+# Thư mục build cho hệ điều hành 32-bit
+x86/
+# Thư mục build cho dòng chip ARM
+ARM/
+# Thư mục build cho dòng chip ARM64
+ARM64/
+# Các thư mục build chung khác
+build/
+Build/
+bin/
+obj/
+
+# --------------------------------------------------------------------
+# 2. File cấu hình cá nhân của lập trình viên (Không đưa lên Git để tránh xung đột)
+# --------------------------------------------------------------------
+# Solution User Options (lưu trạng thái làm việc cá nhân)
+*.suo
+# Cấu hình người dùng của Project
+*.user
+# Cấu hình gỡ lỗi cá nhân (đường dẫn, thư mục chạy trên máy của bạn)
+*.vcxproj.user
+# Trạng thái hiển thị tài liệu của Solution
+*.sln.docstates
+
+# --------------------------------------------------------------------
+# 3. File trung gian được tạo ra trong quá trình biên dịch (Compiler/Linker)
+# --------------------------------------------------------------------
+# Object files (Windows)
+*.obj
+# Object files (Unix/GCC)
+*.o
+# Program Database (dùng để gỡ lỗi/debug, rất nặng)
+*.pdb
+# Incremental Linker file (để liên kết nhanh hơn khi code thay đổi)
+*.ilk
+# MSIL .NET compiler state
+*.idb
+# Export file
+*.exp
+# Thư viện tĩnh (Static Library)
+*.lib
+# Thư viện liên kết động (Dynamic Library)
+*.dll
+# Thư viện tĩnh (Unix)
+*.a
+# Thư viện liên kết động (Unix)
+*.so
+# File thực thi chương trình (Không push lên Github để tránh virus và nặng repo)
+*.exe
+# File thực thi đầu ra (Unix)
+*.out
+# File ứng dụng (macOS)
+*.app
+# Precompiled Header file
+*.pch
+# Compiled Resource file
+*.res
+
+# --------------------------------------------------------------------
+# 4. Cơ sở dữ liệu và Cache của Visual Studio
+# --------------------------------------------------------------------
+# Database phân tích mã nguồn IntelliSense của VS (rất nặng)
+*.VC.db
+# Database đang mở của IntelliSense
+*.VC.opendb
+# SQL Server Compact Database (trong các bản VS cũ)
+*.sdf
+# File database SQLite
+*.sqlite
+# File cơ sở dữ liệu chung
+*.db
+# File cache tạm thời
+*.cache
+
+# --------------------------------------------------------------------
+# 5. Nhật ký biên dịch (Logs) và File tạm (Temporary)
+# --------------------------------------------------------------------
+# File nhật ký ghi lỗi/quá trình chạy
+*.log
+# Nhật ký biên dịch của Visual Studio
+*.tlog
+# File tạm
+*.tmp
+*.temp
+# File ghi nhận trạng thái build cuối cùng để biên dịch bù
+*.lastbuildstate
+# File báo cáo kết quả biên dịch dạng HTML
+BuildLog.htm
+
+# --------------------------------------------------------------------
+# 6. File rác từ hệ điều hành (OS Junk Files)
+# --------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------------------------------------------------------
+# 7. File bảo mật và môi trường (Tuyệt đối không push lên GitHub)
+# --------------------------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# --------------------------------------------------------------------
+# 8. CẤU HÌNH ĐẢM BẢO GIỮ LẠI CÁC FILE QUAN TRỌNG
+# --------------------------------------------------------------------
+# Đảm bảo Git KHÔNG bao giờ bỏ qua các file mã nguồn và file dự án quan trọng
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+# File Solution của Visual Studio (Cực kỳ quan trọng để mở dự án)
+!*.sln
+# File cấu hình Project của Visual Studio
+!*.vcxproj
+# File phân loại thư mục ảo (Source Files, Header Files) trong VS
+!*.vcxproj.filters
+# File Markdown tài liệu (như README.md)
+!*.md
+# File hướng dẫn README
+!README*

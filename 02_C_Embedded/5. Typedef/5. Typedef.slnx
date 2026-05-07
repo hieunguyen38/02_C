@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="5. Typedef/5. Typedef.vcxproj" Id="07f3f019-ee38-496a-8266-fdb1234e6f1b" />
+</Solution>

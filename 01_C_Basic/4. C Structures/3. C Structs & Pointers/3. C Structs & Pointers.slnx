@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="3. C Structs &amp; Pointers/3. C Structs &amp; Pointers.vcxproj" />
+</Solution>

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="3. C Access Memory/3. C Access Memory.vcxproj" Id="5c33a07e-fe88-4d42-bbe8-501f96f823c2" />
+</Solution>

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="2. C Allocate Memory/2. C Allocate Memory.vcxproj" />
+</Solution>

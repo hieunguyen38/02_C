@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="4. C Reallocate Memory/4. C Reallocate Memory.vcxproj" Id="ffdb9634-dc2e-4908-8732-00e971361eba" />
+</Solution>

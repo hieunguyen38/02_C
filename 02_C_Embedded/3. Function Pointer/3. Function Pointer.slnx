@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="3. Function Pointer/3. Function Pointer.vcxproj" Id="7cb1b2d1-73fc-4d27-9f86-0673d76023a0" />
+</Solution>
