@@ -10,23 +10,22 @@
 .vs/
 # Thư mục chứa dữ liệu biên dịch trước (Precompiled Headers) của IntelliSense
 ipch/
-# Thư mục chứa file chạy thử nghiệm và trung gian (cả chữ hoa/thường)
-[Db]ebug/
-# Thư mục chứa file chạy tối ưu và trung gian
-[Rr]elease/
-# Thư mục build cho hệ điều hành 64-bit
+
+# Các thư mục chứa file biên dịch và trung gian (Dùng tên tường minh để Git nhận diện tốt nhất)
+Debug/
+debug/
+Release/
+release/
 x64/
-# Thư mục build cho hệ điều hành 32-bit
 x86/
-# Thư mục build cho dòng chip ARM
 ARM/
-# Thư mục build cho dòng chip ARM64
 ARM64/
-# Các thư mục build chung khác
 build/
 Build/
 bin/
+Bin/
 obj/
+Obj/
 
 # --------------------------------------------------------------------
 # 2. File cấu hình cá nhân của lập trình viên (Không đưa lên Git để tránh xung đột)
@@ -73,6 +72,10 @@ obj/
 *.pch
 # Compiled Resource file
 *.res
+# Các file recipe và thông tin build khác của VS
+*.recipe
+*.iobj
+*.ipdb
 
 # --------------------------------------------------------------------
 # 4. Cơ sở dữ liệu và Cache của Visual Studio
