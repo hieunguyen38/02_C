@@ -28,15 +28,17 @@
 |-----------|------------------------------------------------|
 | PHẦN II   | C EMBEDDED (LẬP TRÌNH NHÚNG CHUYÊN SÂU)        |
 | CHƯƠNG 10 | CON TRỎ TOÀN TẬP (NORMAL, VOID, FUNCTION PTR)  |
-| CHƯƠNG 11 | THAO TÁC BIT CHUYÊN SÂU (BITWISE MANIPULATION) |
-| CHƯƠNG 12 | TIỀN XỬ LÝ & MACRO                             |
-| CHƯƠNG 13 | STRUCT ALIGNMENT & STRUCT PACKING              |
-| CHƯƠNG 14 | UNION & ỨNG DỤNG TRUY CẬP THANH GHI DIRECT     |
-| CHƯƠNG 15 | PHÂN BIỆT STATIC & EXTERN                      |
-| CHƯƠNG 16 | VOLATILE TOÀN TẬP                              |
-| CHƯƠNG 17 | CONST & WEAK: TỐI ƯU FLASH/RAM & CALLBACK      |
-| CHƯƠNG 18 | TỔ CHỨC BỘ NHỚ MCU (FLASH, SRAM, STACK, HEAP)  |
-| CHƯƠNG 19 | CHỐNG DỘI NÚT NHẤN (DEBOUNCE) & DEBUG LOG      |
+| CHƯƠNG 11 | TYPEDEF — ĐẶT TÊN MỚI CHO KIỂU DỮ LIỆU         |
+| CHƯƠNG 12 | ENUM — ĐỊNH NGHĨA CÁC TRẠNG THÁI (STATE)        |
+| CHƯƠNG 13 | THAO TÁC BIT CHUYÊN SÂU (BITWISE MANIPULATION) |
+| CHƯƠNG 14 | TIỀN XỬ LÝ & MACRO                             |
+| CHƯƠNG 15 | STRUCT ALIGNMENT & STRUCT PACKING              |
+| CHƯƠNG 16 | UNION & ỨNG DỤNG TRUY CẬP THANH GHI DIRECT     |
+| CHƯƠNG 17 | PHÂN BIỆT STATIC & EXTERN                      |
+| CHƯƠNG 18 | VOLATILE TOÀN TẬP                              |
+| CHƯƠNG 19 | CONST & WEAK: TỐI ƯU FLASH/RAM & CALLBACK      |
+| CHƯƠNG 20 | TỔ CHỨC BỘ NHỚ MCU (FLASH, SRAM, STACK, HEAP)  |
+| CHƯƠNG 21 | CHỐNG DỘI NÚT NHẤN (DEBOUNCE) & DEBUG LOG      |
 |-----------|------------------------------------------------|
 | PHẦN III  | BỘ CÂU HỎI TRẮC NGHIỆM ÔN THI CUỐI KHÓA        |
 | CÂU 01-10 | GIẢI CHI TIẾT LOGIC BIÊN DỊCH TỪNG BYTE        |
@@ -44,6 +46,10 @@
 ```
 
 ### 🔖 Chi tiết các bài học
+
+---
+
+**📘 PHẦN I: C BASIC (KIẾN THỨC CƠ BẢN TOÀN DIỆN)**
 
 <details>
 <summary><b>Chương 01: Giới thiệu và thiết lập môi trường C</b></summary>
@@ -139,25 +145,90 @@
 - [#49. Chữa Bài Tập Lab 08](#bai-49)
 </details>
 
+---
+
+**📗 PHẦN II: C EMBEDDED (LẬP TRÌNH NHÚNG CHUYÊN SÂU)**
+
 <details>
-<summary><b>Phần II: C Embedded (Lập trình nhúng chuyên sâu)</b></summary>
+<summary><b>Chương 10: Con trỏ toàn tập (Normal, Void, Function Ptr)</b></summary>
 
 - [#50. Con trỏ toàn tập: Normal, Void, Function Pointer & Arithmetic](#bai-50)
-- [#51. Thao tác bit chuyên sâu: Set, Clear, Toggle, Check Bit](#bai-51)
-- [#52. Tiền xử lý, Macro Function vs Inline Function](#bai-52)
-- [#53. Struct Alignment và Struct Packing (#pragma pack)](#bai-53)
-- [#54. Union & Ứng dụng can thiệp thanh ghi Register](#bai-54)
-- [#55. Static & Extern trong lập trình module hóa](#bai-55)
-- [#56. Volatile: Chống tối ưu hóa trình biên dịch & xử lý ngắt ISR](#bai-56)
-- [#57. Const lưu Flash & Hàm \_\_weak tạo Callback Driver](#bai-57)
-- [#58. Cấu trúc phân vùng bộ nhớ MCU (Flash, SRAM, Stack, Heap)](#bai-58)
-- [#59. Chống dội phím Debounce & Bật/Tắt Debug Log thực tế](#bai-59)
 </details>
 
 <details>
-<summary><b>Phần III: Giải chi tiết bộ câu hỏi trắc nghiệm ôn tập tuyển dụng</b></summary>
+<summary><b>Chương 11: Typedef — Đặt tên mới cho kiểu dữ liệu</b></summary>
 
-- [#60. Phân tích logic biên dịch chi tiết 10 câu hỏi cuối khóa](#bai-60)
+- [#51. Typedef — Đặt tên mới cho kiểu dữ liệu](#bai-51)
+</details>
+
+<details>
+<summary><b>Chương 12: Enum — Định nghĩa các trạng thái (State)</b></summary>
+
+- [#52. Enum — Định nghĩa các trạng thái (State)](#bai-52)
+</details>
+
+<details>
+<summary><b>Chương 13: Thao tác bit chuyên sâu (Bitwise Manipulation)</b></summary>
+
+- [#53. Thao tác bit chuyên sâu: Set, Clear, Toggle, Check Bit](#bai-53)
+</details>
+
+<details>
+<summary><b>Chương 14: Tiền xử lý & Macro</b></summary>
+
+- [#54. Tiền xử lý, Macro Function vs Inline Function](#bai-54)
+</details>
+
+<details>
+<summary><b>Chương 15: Struct Alignment & Struct Packing</b></summary>
+
+- [#55. Struct Alignment và Struct Packing (#pragma pack)](#bai-55)
+</details>
+
+<details>
+<summary><b>Chương 16: Union & Ứng dụng truy cập thanh ghi Direct</b></summary>
+
+- [#56. Union & Ứng dụng can thiệp thanh ghi Register](#bai-56)
+</details>
+
+<details>
+<summary><b>Chương 17: Phân biệt Static & Extern</b></summary>
+
+- [#57. Static & Extern trong lập trình module hóa](#bai-57)
+</details>
+
+<details>
+<summary><b>Chương 18: Volatile toàn tập</b></summary>
+
+- [#58. Volatile: Chống tối ưu hóa trình biên dịch & xử lý ngắt ISR](#bai-58)
+</details>
+
+<details>
+<summary><b>Chương 19: Const & Weak: Tối ưu Flash/RAM & Callback</b></summary>
+
+- [#59. Const lưu Flash & Hàm \_\_weak tạo Callback Driver](#bai-59)
+</details>
+
+<details>
+<summary><b>Chương 20: Tổ chức bộ nhớ MCU (Flash, SRAM, Stack, Heap)</b></summary>
+
+- [#60. Cấu trúc phân vùng bộ nhớ MCU (Flash, SRAM, Stack, Heap)](#bai-60)
+</details>
+
+<details>
+<summary><b>Chương 21: Chống dội nút nhấn (Debounce) & Debug Log</b></summary>
+
+- [#61. Chống dội phím Debounce & Bật/Tắt Debug Log thực tế](#bai-61)
+</details>
+
+---
+
+**📙 PHẦN III: BỘ CÂU HỎI TRẮC NGHIỆM ÔN THI CUỐI KHÓA**
+
+<details>
+<summary><b>Giải chi tiết bộ câu hỏi trắc nghiệm ôn tập tuyển dụng</b></summary>
+
+- [#62. Phân tích logic biên dịch chi tiết 10 câu hỏi cuối khóa](#bai-62)
 </details>
 
 ---
@@ -1648,32 +1719,69 @@ int main() {
 
 ## #50. Con trỏ toàn tập: Normal, Void, Function Pointer & Arithmetic
 
-### 1. Con trỏ Void (Void Pointer - `void*`)
+### 1. Con trỏ thường (Normal Pointer)
 
-- Là con trỏ vạn năng, có thể nhận địa chỉ của bất kỳ kiểu dữ liệu nào (`char`, `int`, `struct`...) mà không cần thực hiện ép kiểu tường minh.
-- ⚠️ **Lưu ý:** Không thể thực hiện phép toán giải trỏ (`*ptr`) lấy giá trị trực tiếp từ con trỏ `void` nếu không thực hiện ép kiểu về con trỏ dữ liệu cụ thể trước.
+Con trỏ là một biến đặc biệt dùng để **lưu trữ địa chỉ ô nhớ** của một biến khác trong RAM. Trong lập trình nhúng, con trỏ cực kỳ quan trọng vì bộ nhớ RAM của vi điều khiển rất hạn chế — dùng con trỏ giúp quản lý bộ nhớ hiệu quả hơn nhiều so với sao chép dữ liệu.
+
+![alt text](image/3.png)
+
+```c
+int a = 15;         // Biến a lưu giá trị 15 tại địa chỉ ví dụ 0x12345678
+int *ptr = &a;      // Con trỏ ptr lưu địa chỉ của a (0x12345678)
+
+printf("%p", ptr);  // In địa chỉ: 0x12345678
+printf("%d", *ptr); // Giải trỏ lấy giá trị tại địa chỉ đó: 15
+```
+
+> 💡 **Ô nhớ = Giá trị + Địa chỉ.** Con trỏ là biến quản lý địa chỉ đó, kích thước con trỏ luôn cố định: **4 bytes trên CPU 32-bit**, **8 bytes trên CPU 64-bit** — bất kể kiểu dữ liệu đang trỏ tới là gì.
+
+**Phép dịch con trỏ (Pointer Arithmetic) trong mảng:**
+
+![alt text](image/4.png)
+
+```c
+//  Mảng: [ 1 ][ 2 ][ 3 ][ 4 ][ 5 ]
+//          ↑                   ↑
+//        ptr8                ptr32
+// ptr8++ dịch 1 byte (char), ptr32++ dịch 4 bytes (int)
+
+int arr[] = {1, 2, 3, 4, 5};
+int *ptr = arr;   // ptr trỏ tới arr[0]
+ptr++;            // ptr dịch sang arr[1] (tăng 4 bytes vì kiểu int)
+printf("%d", *ptr); // In: 2
+```
+
+### 2. Con trỏ Void (Void Pointer - `void*`)
+
+- Dùng để **truyền 1 con trỏ mà không quan tâm kiểu dữ liệu** của nó — sau đó tùy project mà ép kiểu mình mong muốn.
+- ⚠️ **Lưu ý:** Không thể giải trỏ (`*ptr`) trực tiếp từ `void*` nếu chưa ép kiểu cụ thể.
 
 ```c
 int a = 15;
-void *vPtr = &a; // Hợp lệ hoàn toàn
-// printf("%d", *vPtr); // ❌ Lỗi biên dịch (Không rõ kích thước kiểu dữ liệu trỏ tới)
-printf("%d", *(int*)vPtr); // ✅ Đúng: Ép về kiểu (int*) rồi giải trỏ lấy giá trị
+void *vPtr = &a; // Hợp lệ hoàn toàn, nhận địa chỉ bất kỳ kiểu nào
+// printf("%d", *vPtr); // ❌ Lỗi biên dịch
+printf("%d", *(int*)vPtr); // ✅ Ép về (int*) rồi giải trỏ
 ```
 
-### 2. Phép toán tịnh tiến con trỏ (Pointer Arithmetic)
+### 3. Phép toán tịnh tiến con trỏ (Pointer Arithmetic)
 
-Cộng/trừ một số nguyên với con trỏ sẽ dịch chuyển địa chỉ ô nhớ của con trỏ dựa trên **Kích thước của kiểu dữ liệu** mà con trỏ đó đang quản lý:
-$$\text{Địa chỉ mới} = \text{Địa chỉ cũ} + (n \times \text{sizeof(Kiểu_dữ_liệu)})$$
+Cộng/trừ một số nguyên với con trỏ sẽ dịch chuyển địa chỉ ô nhớ dựa trên **kích thước kiểu dữ liệu** mà con trỏ đó đang quản lý:
+
+$$\text{Địa chỉ mới} = \text{Địa chỉ cũ} + (n \times \text{sizeof(Kiểu\_dữ\_liệu)})$$
 
 ```c
+// ptr8 (char*): mỗi lần ++ dịch 1 byte
+// ptr32 (int*): mỗi lần ++ dịch 4 bytes
 char *cPtr = (char*) 0x20000000;
-int *iPtr = (int*) 0x20000000;
+int  *iPtr = (int*)  0x20000000;
 
-cPtr++; // Dịch chuyển đi 1 byte  -> Địa chỉ mới: 0x20000001
-iPtr++; // Dịch chuyển đi 4 bytes -> Địa chỉ mới: 0x20000004
+cPtr++; // -> 0x20000001 (dịch 1 byte)
+iPtr++; // -> 0x20000004 (dịch 4 bytes)
 ```
 
-### 3. Con trỏ Hàm (Function Pointer)
+> 💡 **Lý do dùng pointer tiết kiệm bộ nhớ:** Kích thước con trỏ trên STM32 luôn là **4 bytes** bất kể trỏ tới struct 100 bytes hay char 1 byte — dùng ít bộ nhớ hơn rất nhiều so với sao chép toàn bộ dữ liệu vào hàm.
+
+### 4. Con trỏ Hàm (Function Pointer)
 
 - Hàm khi biên dịch sẽ được nạp cố định vào bộ nhớ Flash và bắt đầu bằng một địa chỉ cụ thể. Con trỏ hàm dùng để lưu trữ địa chỉ bắt đầu của hàm đó để có thể gọi thực thi hàm một cách gián tiếp.
 - **Ứng dụng lớn trong nhúng:** Viết Driver ngoại vi, làm hàm **Callback** phản hồi sự kiện ngắt, thiết kế máy trạng thái (State Machine).
@@ -1693,15 +1801,121 @@ int main() {
 }
 ```
 
+![alt text](image/5.png)
+
 ---
 
 <div id="bai-51"></div>
 
-## #51. Thao tác bit chuyên sâu: Set, Clear, Toggle, Check Bit
+## #51. Typedef — Đặt tên mới cho kiểu dữ liệu
+
+`typedef` cho phép tạo một **tên mới (alias)** cho một kiểu dữ liệu có sẵn. Rất phổ biến trong lập trình nhúng để tăng tính đọc hiểu và viết code gọn hơn.
+
+### 1. Cú pháp cơ bản
+
+```c
+typedef <kiểu_gốc> <tên_mới>;
+
+typedef unsigned char  uint8_t;  // Đặt tên uint8_t cho unsigned char
+typedef unsigned short uint16_t; // Đặt tên uint16_t cho unsigned short
+typedef unsigned int   uint32_t; // Đặt tên uint32_t cho unsigned int
+```
+
+### 2. Kết hợp với Struct (cực kỳ phổ biến trong nhúng)
+
+```c
+// Không dùng typedef: phải viết "struct Point p1"
+struct Point { int x; int y; };
+
+// Dùng typedef: chỉ cần viết "Point p1" ngắn gọn hơn
+typedef struct {
+    int x;
+    int y;
+} Point;
+
+Point p1 = {10, 20}; // Gọn hơn rất nhiều
+```
+
+### 3. Kết hợp với Function Pointer (thường gặp trong Driver STM32)
+
+```c
+// Khai báo kiểu con trỏ hàm có tên CallbackFunc
+typedef void (*CallbackFunc)(uint8_t data);
+
+// Dùng như kiểu dữ liệu bình thường
+CallbackFunc uartRxCallback = NULL;
+```
+
+> 💡 **Lý do dùng typedef trong nhúng:** Giúp code dễ đọc, dễ port sang nền tảng khác và là tiêu chuẩn bắt buộc trong hầu hết các thư viện nhúng như HAL, CMSIS của ST.
+
+---
+
+<div id="bai-52"></div>
+
+## #52. Enum — Định nghĩa các trạng thái (State)
+
+### 1. Khái niệm
+
+`enum` dùng để định nghĩa một tập hợp các **hằng số nguyên có tên** (named integer constants), thường dùng để đặt tên cho các trạng thái (state), chế độ (mode) hoặc mã lệnh trong lập trình nhúng — giúp code dễ đọc hơn nhiều so với dùng số trần `0`, `1`, `2`...
+
+Mặc định không gắn thì phần tử đầu tiên là 0 => Phần tử tiếp theo là 1 (+1)
+
+### 2. Cú pháp và quy tắc tự động tăng
+
+```c
+typedef enum {
+    LED_OFF = 0,   // Gán rõ giá trị = 0
+    LED_ON,        // Tự động = 1 (LED_OFF + 1)
+    LED_BLINK      // Tự động = 2
+} LedState;
+```
+
+> 📌 **Quy tắc:** Nếu không gán giá trị rõ ràng, phần tử đầu tiên mặc định = `0`, các phần tử tiếp theo tự động tăng thêm `1`. Nếu một phần tử được gán lại, các phần tử sau tiếp tục tăng từ giá trị đó.
+
+```c
+typedef enum {
+    STATE_IDLE = 0,
+    STATE_RUNNING,  // = 1
+    STATE_ERROR,    // = 2
+    STATE_RESET = 10,
+    STATE_DONE      // = 11
+} SystemState;
+```
+
+### 3. Ứng dụng điển hình trong nhúng — Máy trạng thái (State Machine)
+
+```c
+typedef enum {
+    BTN_IDLE = 0,
+    BTN_PRESSED,
+    BTN_HELD,
+    BTN_RELEASED
+} ButtonState;
+
+ButtonState currentState = BTN_IDLE;
+
+// Dùng switch-case để xử lý từng trạng thái
+switch (currentState) {
+    case BTN_IDLE:     /* Đợi nhấn */    break;
+    case BTN_PRESSED:  /* Xử lý nhấn */  break;
+    case BTN_HELD:     /* Giữ nút */     break;
+    case BTN_RELEASED: /* Thả nút */     break;
+}
+```
+
+> 💡 **Lợi ích trong nhúng:** Thay vì dùng `#define BTN_IDLE 0` rải rác, `enum` nhóm tất cả trạng thái liên quan vào một chỗ, trình biên dịch có thể cảnh báo nếu `switch-case` thiếu xử lý một trạng thái nào đó.
+
+---
+
+<div id="bai-54"></div>
+
+## #53. Thao tác bit chuyên sâu: Set, Clear, Toggle, Check Bit
 
 Trong lập trình vi điều khiển, việc cấu hình phần cứng thực chất là thay đổi trạng thái các bit trong các thanh ghi (Register) điều khiển.
 
 ### 1. Bảng các phép Bitwise Manipulations kinh điển
+
+![alt text](image/6.png)
 
 Giả sử cần cấu hình hoặc thay đổi trạng thái tại vị trí bit thứ `n` trên thanh ghi (hoặc biến số) `Register`:
 
@@ -1722,13 +1936,13 @@ GPIOB_ODR ^= (1 << 3);  // Đảo bit 3 về 0 -> GPIOB_ODR = 0x00 (0000 0000)
 
 ---
 
-<div id="bai-52"></div>
+<div id="bai-54"></div>
 
-## #52. Tiền xử lý, Macro Function vs Inline Function
+## #54. Tiền xử lý, Macro Function vs Inline Function
 
 ### 1. Chỉ thị bảo vệ tệp tiêu đề (Header Guards)
 
-Sử dụng `#ifndef` kết hợp `#define` ở tất cả các file header `.h` trong dự án để ngăn ngừa hiện tượng biên dịch lặp đi lặp lại nhiều lần cùng một cấu trúc dữ liệu, gây ra lỗi trùng định nghĩa (Duplicate Definition) cực kỳ khó chịu khi liên kết file.
+Sử dụng `#ifndef` kết hợp `#define` ở tất cả các file header `.h` trong dự án để ngăn ngừa hiện tượng biên dịch lặp đi lặp lại nhiều lần cùng một cấu trúc dữ liệu, gây ra lỗi trùng định nghĩa (Duplicate Definition) cực kỳ khó chịu khi liên kết file. Việc này giúp tiết kiệm bộ nhớ nhờ tránh việc lặp đi lặp lại
 
 ```c
 // File: temp_sensor.h
@@ -1750,9 +1964,12 @@ void read_sensor(void);
 
 ---
 
-<div id="bai-53"></div>
+<div id="bai-55"></div>
 
-## #53. Struct Alignment và Struct Packing (#pragma pack)
+## #55. Struct Alignment và Struct Packing (#pragma pack)
+
+- Tự tạo kiểu dữ liệu (do ng dùng tự định nghĩa)
+- Kiểu dữ liệu nguyên thủy lớn nhất => Size cơ sở
 
 ### 1. Hiện tượng Căn chỉnh bộ nhớ (Memory Alignment)
 
@@ -1770,6 +1987,8 @@ struct Sample {
 
 ### 2. Ép căn lề 1 byte bằng Struct Packing
 
+![alt text](image/10.png)
+
 Trong lập trình nhúng truyền thông UART/SPI/CAN, ta cần gửi gói tin chính xác từng byte (Data Frame) mà không chứa bất kỳ byte rác padding nào. Sử dụng chỉ thị cấu hình `#pragma pack(push, 1)`:
 
 ```c
@@ -1786,11 +2005,13 @@ struct Packet {
 
 ---
 
-<div id="bai-54"></div>
+<div id="bai-56"></div>
 
-## #54. Union & Ứng dụng can thiệp thanh ghi Register
+## #56. Union & Ứng dụng can thiệp thanh ghi Register
 
 Union dùng chung 1 vùng nhớ vật lý duy nhất cho toàn bộ các biến thành viên của nó. Kích thước của Union luôn bằng kích thước của phần tử lớn nhất.
+
+![alt text](image/7.png)
 
 ### Ứng dụng điều khiển trực tiếp các bit trong thanh ghi Register:
 
@@ -1817,11 +2038,13 @@ int main() {
 
 ---
 
-<div id="bai-55"></div>
+<div id="bai-57"></div>
 
-## #55. Static & Extern trong lập trình module hóa
+## #57. Static & Extern trong lập trình module hóa
 
 ### 1. Từ khóa `static`
+
+![alt text](image/9.png)
 
 - **Static cục bộ (Local Static Variable):** Khai báo bên trong hàm. Biến được khởi tạo một lần duy nhất khi nạp chương trình, giá trị biến được **giữ nguyên không bị giải phóng** khi hàm kết thúc. Biến chuyển từ lưu trữ ở Stack sang phân vùng `.data` hoặc `.bss` của RAM.
 - **Static toàn cục (Global Static Variable / Function):** Khai báo ở mức file `.c`. **Giới hạn phạm vi sử dụng của biến/hàm chỉ nằm trong nội bộ file `.c` đó**, file `.c` khác không thể can thiệp được. Giúp đóng gói module an toàn, tránh lỗi trùng tên biến trong dự án lớn.
@@ -1838,11 +2061,15 @@ int batteryPercentage = 95; // Định nghĩa biến toàn cục
 extern int batteryPercentage; // Khai báo extern để LCD đọc và hiển thị
 ```
 
+> ⚠️ **Thực tế:** Nếu dùng `extern` nhiều, sẽ phải khai báo lặp lại ở mỗi file. Giải pháp tốt hơn là tạo một file `lib.h` chứa tất cả khai báo `extern` rồi `#include "lib.h"` vào những file nào cần — gọn và dễ quản lý hơn.
+
 ---
 
-<div id="bai-56"></div>
+<div id="bai-58"></div>
 
-## #56. Volatile: Chống tối ưu hóa trình biên dịch & xử lý ngắt ISR
+## #58. Volatile: Chống tối ưu hóa trình biên dịch & xử lý ngắt ISR
+
+![alt text](image/8.png)
 
 ### 1. Bản chất của `volatile`
 
@@ -1874,9 +2101,9 @@ int main() {
 
 ---
 
-<div id="bai-57"></div>
+<div id="bai-59"></div>
 
-## #57. Const lưu Flash & Hàm \_\_weak tạo Callback Driver
+## #59. Const lưu Flash & Hàm \_\_weak tạo Callback Driver
 
 ### 1. Từ khóa `const` - Giải phóng RAM lưu vào Flash
 
@@ -1900,40 +2127,42 @@ void UART_RxCallback(uint8_t data) {
 
 ---
 
-<div id="bai-58"></div>
+<div id="bai-60"></div>
 
-## #58. Cấu trúc phân vùng bộ nhớ MCU (Flash, SRAM, Stack, Heap)
+## #60. Cấu trúc phân vùng bộ nhớ MCU (Flash, SRAM, Stack, Heap)
 
 Khi vi điều khiển khởi động, bộ nhớ của nó được phân chia thành các vùng chức năng quản lý riêng biệt cực kỳ chặt chẽ:
 
 ```
-+-------------------------------------------------------------+
-| BỘ NHỚ FLASH (Lưu trữ cố định, không mất dữ liệu khi mất điện) |
-| - [ .text   ] : Lưu trữ mã lệnh thực thi của chương trình.   |
-| - [ .rodata ] : Lưu trữ các hằng số chỉ đọc (biến const...). |
-+-------------------------------------------------------------+
++------------------------------------------------------------------+
+| BỘ NHỚ FLASH (Lưu trữ cố định, không mất dữ liệu khi mất điện)   |
+| - [ .text   ] : Lưu trữ mã lệnh thực thi của chương trình.       |
+| - [ .rodata ] : Lưu trữ các hằng số chỉ đọc (biến const...).     |
++------------------------------------------------------------------+
 | BỘ NHỚ SRAM  (Lưu trữ tạm thời, mất toàn bộ dữ liệu khi mất điện)|
-| - [ .data   ] : Lưu biến toàn cục/static ĐÃ khởi tạo khác 0. |
-| - [ .bss    ] : Lưu biến toàn cục/static CHƯA khởi tạo/bằng 0.|
-|                                                             |
-| - [ HEAP    ] : Bộ nhớ cấp phát động lúc runtime (malloc...)  |
-|       |                                                     |
-|       v (Phát triển hướng lên địa chỉ cao)                   |
-|                                                             |
-|       ^ (Phát triển hướng xuống địa chỉ thấp)                 |
-|       |                                                     |
-| - [ STACK   ] : Biến cục bộ trong hàm, tham số truyền vào,   |
-|                 địa chỉ phản hồi hàm ngắt. Quản lý tự động.  |
-+-------------------------------------------------------------+
+| - [ .data   ] : Lưu biến toàn cục/static ĐÃ khởi tạo khác 0.     |
+| - [ .bss    ] : Lưu biến toàn cục/static CHƯA khởi tạo/bằng 0.   |
+|                                                                  |
+| - [ HEAP    ] : Bộ nhớ cấp phát động lúc runtime (malloc...)     |
+|       |                                                          |
+|       v (Phát triển hướng lên địa chỉ cao)                       |
+|                                                                  |
+|       ^ (Phát triển hướng xuống địa chỉ thấp)                    |
+|       |                                                          |
+| - [ STACK   ] : Biến cục bộ trong hàm, tham số truyền vào,       |
+|                 địa chỉ phản hồi hàm ngắt. Quản lý tự động.      |
++------------------------------------------------------------------+
 ```
 
 > ⚠️ **Lời khuyên thực chiến:** Hạn chế tối đa sử dụng bộ nhớ **Heap** trong các dự án nhúng chạy lâu dài (như thiết bị IoT hoạt động 24/7) để tránh hiện tượng phân mảnh bộ nhớ (Memory Fragmentation), gây sập nguồn hoặc crash hệ điều hành RTOS bất ngờ.
 
 ---
 
-<div id="bai-59"></div>
+<div id="bai-61"></div>
 
-## #59. Chống dội phím Debounce & Bật/Tắt Debug Log thực tế
+## #61. Chống dội phím Debounce & Bật/Tắt Debug Log thực tế
+
+![alt text](image/11.png)
 
 ### 1. Kỹ thuật chống dội nút nhấn bằng phần mềm (Software Debouncing)
 
@@ -1973,7 +2202,7 @@ int main() {
 
 ---
 
-<div id="bai-60"></div>
+<div id="bai-61"></div>
 
 # PHẦN III: GIẢI CHI TIẾT BỘ CÂU HỎI TRẮC NGHIỆM ÔN TẬP TUYỂN DỤNG
 
