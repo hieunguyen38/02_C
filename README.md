@@ -1723,7 +1723,7 @@ int main() {
 
 Con trỏ là một biến đặc biệt dùng để **lưu trữ địa chỉ ô nhớ** của một biến khác trong RAM. Trong lập trình nhúng, con trỏ cực kỳ quan trọng vì bộ nhớ RAM của vi điều khiển rất hạn chế — dùng con trỏ giúp quản lý bộ nhớ hiệu quả hơn nhiều so với sao chép dữ liệu.
 
-![alt text](image/3.png)
+![alt text](image/3.jpg)
 
 ```c
 int a = 15;         // Biến a lưu giá trị 15 tại địa chỉ ví dụ 0x12345678
@@ -1756,6 +1756,8 @@ printf("%d", *ptr); // In: 2
 - Dùng để **truyền 1 con trỏ mà không quan tâm kiểu dữ liệu** của nó — sau đó tùy project mà ép kiểu mình mong muốn.
 - ⚠️ **Lưu ý:** Không thể giải trỏ (`*ptr`) trực tiếp từ `void*` nếu chưa ép kiểu cụ thể.
 
+![alt text](image/12.jpg)
+
 ```c
 int a = 15;
 void *vPtr = &a; // Hợp lệ hoàn toàn, nhận địa chỉ bất kỳ kiểu nào
@@ -1785,6 +1787,8 @@ iPtr++; // -> 0x20000004 (dịch 4 bytes)
 
 - Hàm khi biên dịch sẽ được nạp cố định vào bộ nhớ Flash và bắt đầu bằng một địa chỉ cụ thể. Con trỏ hàm dùng để lưu trữ địa chỉ bắt đầu của hàm đó để có thể gọi thực thi hàm một cách gián tiếp.
 - **Ứng dụng lớn trong nhúng:** Viết Driver ngoại vi, làm hàm **Callback** phản hồi sự kiện ngắt, thiết kế máy trạng thái (State Machine).
+
+![alt text](image/13.jpg)
 
 ```c
 void toggleLed() {
@@ -1859,6 +1863,8 @@ CallbackFunc uartRxCallback = NULL;
 `enum` dùng để định nghĩa một tập hợp các **hằng số nguyên có tên** (named integer constants), thường dùng để đặt tên cho các trạng thái (state), chế độ (mode) hoặc mã lệnh trong lập trình nhúng — giúp code dễ đọc hơn nhiều so với dùng số trần `0`, `1`, `2`...
 
 Mặc định không gắn thì phần tử đầu tiên là 0 => Phần tử tiếp theo là 1 (+1)
+
+![alt text](image/14.jpg)
 
 ### 2. Cú pháp và quy tắc tự động tăng
 
@@ -1944,6 +1950,8 @@ GPIOB_ODR ^= (1 << 3);  // Đảo bit 3 về 0 -> GPIOB_ODR = 0x00 (0000 0000)
 
 Sử dụng `#ifndef` kết hợp `#define` ở tất cả các file header `.h` trong dự án để ngăn ngừa hiện tượng biên dịch lặp đi lặp lại nhiều lần cùng một cấu trúc dữ liệu, gây ra lỗi trùng định nghĩa (Duplicate Definition) cực kỳ khó chịu khi liên kết file. Việc này giúp tiết kiệm bộ nhớ nhờ tránh việc lặp đi lặp lại
 
+![alt text](image/15.jpg)
+
 ```c
 // File: temp_sensor.h
 #ifndef TEMP_SENSOR_H
@@ -1975,6 +1983,8 @@ void read_sensor(void);
 
 Để tăng tốc độ truy cập dữ liệu của CPU, trình biên dịch tự động chèn thêm các byte rác (Padding Bytes) vào bên trong struct để địa chỉ bắt đầu của các thành viên là bội số kích thước kiểu dữ liệu của chính nó.
 
+![alt text](image/16.jpg)
+
 ```c
 struct Sample {
     char a;  // 1 byte
@@ -1987,9 +1997,9 @@ struct Sample {
 
 ### 2. Ép căn lề 1 byte bằng Struct Packing
 
-![alt text](image/10.png)
-
 Trong lập trình nhúng truyền thông UART/SPI/CAN, ta cần gửi gói tin chính xác từng byte (Data Frame) mà không chứa bất kỳ byte rác padding nào. Sử dụng chỉ thị cấu hình `#pragma pack(push, 1)`:
+
+![alt text](image/10.jpg)
 
 ```c
 #pragma pack(push, 1) // Ép trình biên dịch căn chỉnh sát từng 1 byte
@@ -2011,7 +2021,7 @@ struct Packet {
 
 Union dùng chung 1 vùng nhớ vật lý duy nhất cho toàn bộ các biến thành viên của nó. Kích thước của Union luôn bằng kích thước của phần tử lớn nhất.
 
-![alt text](image/7.png)
+![alt text](image/17.jpg)
 
 ### Ứng dụng điều khiển trực tiếp các bit trong thanh ghi Register:
 
@@ -2052,6 +2062,8 @@ int main() {
 ### 2. Từ khóa `extern`
 
 Dùng để thông báo cho trình biên dịch biết một biến toàn cục đã được định nghĩa tại một file `.c` khác, cho phép chia sẻ sử dụng biến toàn cục này xuyên suốt toàn bộ hệ thống dự án.
+
+![alt text](image/18.jpg)
 
 ```c
 // File: bms.c
@@ -2523,5 +2535,8 @@ int main() {
     - Kết quả: `sizeof(tem2)` = **8 bytes**.
 
 ---
+
+![alt text](image/19.jpg)
+![alt text](image/20.jpg)
 
 Chúc bạn có những giây phút ôn tập hiệu quả và chinh phục thành công đỉnh cao Lập trình Nhúng! 🖥️🚀
