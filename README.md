@@ -5,7 +5,8 @@
 
 📚 Tài liệu này được biên soạn tỉ mỉ, đầy đủ từ cơ bản đến nâng cao để tiện tra cứu, ôn tập và lưu trữ trên GitHub.
 
-Link luyện code: https://www.ewskills.com/embedded-c
+Link luyện code: https://www.ewskills.com/embedded-c 
+Leetcode: làm easy/medium về Bit manipulaion, String, Array & Two pointer, Linked list
 
 ⚠️ Kiến thức là vô hạn. Nếu bạn thấy chỗ nào sai sót hay chưa rõ, hãy đóng góp để cùng nhau học tập!
 
