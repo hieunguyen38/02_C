@@ -5,6 +5,8 @@
 
 📚 Tài liệu này được biên soạn tỉ mỉ, đầy đủ từ cơ bản đến nâng cao để tiện tra cứu, ôn tập và lưu trữ trên GitHub.
 
+Link luyện code: https://www.ewskills.com/embedded-c
+
 ⚠️ Kiến thức là vô hạn. Nếu bạn thấy chỗ nào sai sót hay chưa rõ, hãy đóng góp để cùng nhau học tập!
 
 ---
@@ -29,7 +31,7 @@
 | PHẦN II   | C EMBEDDED (LẬP TRÌNH NHÚNG CHUYÊN SÂU)        |
 | CHƯƠNG 10 | CON TRỎ TOÀN TẬP (NORMAL, VOID, FUNCTION PTR)  |
 | CHƯƠNG 11 | TYPEDEF — ĐẶT TÊN MỚI CHO KIỂU DỮ LIỆU         |
-| CHƯƠNG 12 | ENUM — ĐỊNH NGHĨA CÁC TRẠNG THÁI (STATE)        |
+| CHƯƠNG 12 | ENUM — ĐỊNH NGHĨA CÁC TRẠNG THÁI (STATE)       |
 | CHƯƠNG 13 | THAO TÁC BIT CHUYÊN SÂU (BITWISE MANIPULATION) |
 | CHƯƠNG 14 | TIỀN XỬ LÝ & MACRO                             |
 | CHƯƠNG 15 | STRUCT ALIGNMENT & STRUCT PACKING              |
