@@ -2542,4 +2542,242 @@ int main() {
 ![alt text](image/19.jpg)
 ![alt text](image/20.jpg)
 
+# PHẦN IV: LUYỆN TẬP CODE C EMBEDDED TRÊN EWskills
+
+## Chương 1: Bitwise Operations
+
+### ❓ Câu 1: Set or Clear a Specific Bit in a Register
+![alt text](image/image.png)
+```c
+#include <stdio.h>
+unsigned char modifyBit(unsigned char reg, int pos, int mode) {
+   if (mode == 1) {
+       reg |= (1 << pos);  // Set bit
+   } else {
+       reg &= ~(1 << pos); // Clear bit
+   }
+   return reg;
+}
+int main() {
+   unsigned char reg;
+   int pos, mode;
+   scanf("%hhu %d %d", &reg, &pos, &mode);
+   printf("%d", modifyBit(reg, pos, mode));
+   return 0;
+}
+```
+
+### ❓ Câu 2: Bit Toggle
+![alt text](image/image-1.png)
+```c
+#include <stdio.h>
+int toggleFifthBit(int n) {
+   return n ^ (1 << 5);  // Toggle the 5th bit using XOR
+}
+int main() {
+   int n;
+   scanf("%d", &n);
+   printf("%d", toggleFifthBit(n));
+   return 0;
+}
+```
+
+### ❓ Câu 3: Check if K-th Bit is Set
+![alt text](image/image-2.png)
+```c
+#include <stdio.h>
+int isKthBitSet(int n, int k) {
+   return (n & (1 << k)) ? 1 : 0;
+}
+int main() {
+   int n, k;
+   scanf("%d %d", &n, &k);
+   printf("%d", isKthBitSet(n, k));
+   return 0;
+}
+```
+
+### ❓ Câu 4: Set the Bit in an 8-bit Register
+![alt text](image/image-3.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint8_t set_bit(uint8_t reg, uint8_t pos) {
+    return reg | (1 << pos);
+}
+
+int main() {
+    uint8_t reg, pos;
+    scanf("%hhu %hhu", &reg, &pos);
+    uint8_t result = set_bit(reg, pos);
+    printf("%u", result);
+    return 0;
+}
+```
+
+### ❓ Câu 5: Clear the Bit in an 8-bit Register
+![alt text](image/image-4.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint8_t clear_bit(uint8_t reg, uint8_t pos) {
+    return reg & ~(1 << pos);
+}
+
+int main() {
+    uint8_t reg, pos;
+    scanf("%hhu %hhu", &reg, &pos);
+    uint8_t result = clear_bit(reg, pos);
+    printf("%u", result);
+    return 0;
+}
+```
+
+### ❓ Câu 6: Toggle the Bit in an 8-bit Register
+![alt text](image/image-5.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint8_t toggle_bit(uint8_t reg, uint8_t pos) {
+    return reg ^ (1 << pos);
+}
+
+int main() {
+    uint8_t reg, pos;
+    scanf("%hhu %hhu", &reg, &pos);
+    uint8_t result = toggle_bit(reg, pos);
+    printf("%u", result);
+    return 0;
+}
+```
+
+### ❓ Câu 7: Is the Bit Set
+![alt text](image/image-6.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint8_t is_bit_set(uint8_t reg, uint8_t pos) {
+    return (reg >> pos) & 1;
+}
+
+int main() {
+    uint8_t reg, pos;
+    scanf("%hhu %hhu", &reg, &pos);
+    printf("%u", is_bit_set(reg, pos));
+    return 0;
+}
+```
+
+### ❓ Câu 8: Set Specific Bits in a 32-bit Register
+![alt text](image/image-7.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint32_t set_bits(uint32_t reg, uint8_t pos, uint8_t len) {
+    // Create mask with 'len' 1s, then shift to desired position and OR
+    uint32_t mask = ((1U << len) - 1) << pos;
+    return reg | mask;
+}
+
+int main() {
+    uint32_t reg;
+    uint8_t pos, len;
+    scanf("%u %hhu %hhu", &reg, &pos, &len);
+    printf("%u", set_bits(reg, pos, len));
+    return 0;
+}
+```
+
+### ❓ Câu 9: Keep Only the Highest Set Bit
+![alt text](image/image-8.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+uint16_t highest_set_bit(uint16_t reg) {
+    if (reg == 0) return 0;
+
+    uint16_t result = 1U << 15; // find the highest set bit.
+    while ((reg & result) == 0) {
+        result >>= 1;
+    }
+
+    return result;
+}
+
+int main() {
+    uint16_t reg;
+    scanf("%hu", &reg);
+
+    uint16_t result = highest_set_bit(reg);
+    printf("%hu", result);
+    return 0;
+}
+```
+
+### ❓ Câu 10: Bit Operations using Macros
+![alt text](image/image-9.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+#define SET_BIT(r, b)    ((r) |= (1 << (b)))
+#define CLEAR_BIT(r, b)  ((r) &= ~(1 << (b)))
+#define TOGGLE_BIT(r, b) ((r) ^= (1 << (b)))
+
+uint8_t modify_register(uint8_t reg) {
+    SET_BIT(reg, 2);      // Set bit 2
+    SET_BIT(reg, 7);      // Set bit 7
+    CLEAR_BIT(reg, 3);    // Clear bit 3
+    TOGGLE_BIT(reg, 5);   // Toggle bit 5
+    return reg;
+}
+
+int main() {
+    uint8_t reg;
+    scanf("%hhu", &reg);
+    printf("%u", modify_register(reg));
+    return 0;
+}
+```
+
+### ❓ Câu 11: Decode Status Register into Human-Readable Flags
+![alt text](image/image-10.png)
+![alt text](image/image-11.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+const char *flag_names[8] = {
+    "Power On",
+    "Error",
+    "Tx Ready",
+    "Rx Ready",
+    "Overheat",
+    "Undervoltage",
+    "Timeout",
+    "Reserved"
+};
+
+void decode_status(uint8_t status_reg) {
+    for (int i = 0; i < 8; i++) {
+        if ((status_reg >> i) & 1) {
+            printf("%s\n", flag_names[i]);
+        }
+    }
+}
+
+int main() {
+    uint8_t reg;
+    scanf("%hhu", &reg);
+    decode_status(reg);
+    return 0;
+}
+```
+
 Chúc bạn có những giây phút ôn tập hiệu quả và chinh phục thành công đỉnh cao Lập trình Nhúng! 🖥️🚀
