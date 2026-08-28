@@ -45,6 +45,9 @@ Leetcode: làm easy/medium về Bit manipulaion, String, Array & Two pointer, Li
 |-----------|------------------------------------------------|
 | PHẦN III  | BỘ CÂU HỎI TRẮC NGHIỆM ÔN THI CUỐI KHÓA        |
 | CÂU 01-10 | GIẢI CHI TIẾT LOGIC BIÊN DỊCH TỪNG BYTE        |
+|-----------|------------------------------------------------|
+| PHẦN IV   | LUYỆN TẬP CODE C EMBEDDED TRÊN EWSKILLS        |
+| CHƯƠNG 01 | BITWISE OPERATIONS                             |
 ==============================================================
 ```
 
@@ -232,6 +235,31 @@ Leetcode: làm easy/medium về Bit manipulaion, String, Array & Two pointer, Li
 <summary><b>Giải chi tiết bộ câu hỏi trắc nghiệm ôn tập tuyển dụng</b></summary>
 
 - [#62. Phân tích logic biên dịch chi tiết 10 câu hỏi cuối khóa](#bai-62)
+</details>
+
+---
+
+**💻 PHẦN IV: LUYỆN TẬP CODE C EMBEDDED TRÊN EWskills**
+
+<details>
+<summary><b>Chương 1: Bitwise Operations</b></summary>
+
+- [Câu 1: Set or Clear a Specific Bit in a Register](#câu-1-set-or-clear-a-specific-bit-in-a-register)
+- [Câu 2: Bit Toggle](#câu-2-bit-toggle)
+- [Câu 3: Check if K-th Bit is Set](#câu-3-check-if-k-th-bit-is-set)
+- [Câu 4: Set the Bit in an 8-bit Register](#câu-4-set-the-bit-in-an-8-bit-register)
+- [Câu 5: Clear the Bit in an 8-bit Register](#câu-5-clear-the-bit-in-an-8-bit-register)
+- [Câu 6: Toggle the Bit in an 8-bit Register](#câu-6-toggle-the-bit-in-an-8-bit-register)
+- [Câu 7: Is the Bit Set](#câu-7-is-the-bit-set)
+- [Câu 8: Set Specific Bits in a 32-bit Register](#câu-8-set-specific-bits-in-a-32-bit-register)
+- [Câu 9: Keep Only the Highest Set Bit](#câu-9-keep-only-the-highest-set-bit)
+- [Câu 10: Bit Operations using Macros](#câu-10-bit-operations-using-macros)
+- [Câu 11: Decode Status Register into Human-Readable Flags](#câu-11-decode-status-register-into-human-readable-flags)
+- [Câu 12: Bit Spreading Interleave Bits with Zeros](#câu-12-bit-spreading-interleave-bits-with-zeros)
+- [Câu 13: Macro-Based Register Config Helper](#câu-13-macro-based-register-config-helper)
+- [Câu 14: Bitwise Operations-I](#câu-14-bitwise-operations-i)
+- [Câu 15: Bitwise Operations-II](#câu-15-bitwise-operations-ii)
+- [Câu 16: Bitwise Operations-III](#câu-16-bitwise-operations-iii)
 </details>
 
 ---
