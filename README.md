@@ -2902,4 +2902,62 @@ int main() {
 ![alt text](image/ex_image-20.png)
 ![alt text](image/ex_image-21.png)
 
+### ❓ Tự ôn tập lại chương Bitwise
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+// Macro 
+#define SET_1BIT(r, p)          ((r) |= (1U << (p)))
+#define CLEAR_1BIT(r, p)        ((r) &= ~(1U << (p)))
+#define TOGGLE_1BIT(r, p)       ((r) ^= (1U << (p)))
+#define SET_LEN_BIT(r, p, l)    ((r) |= (((1U << (l)) - 1) << (p)))
+
+// Hàm print ra dạng binary
+void print_bin(uint8_t num, uint8_t bits) {
+    for (int i = bits - 1; i >= 0; i--) {
+        printf("%d", (num >> i) & 1U);
+        if (i % 4 == 0) {
+            printf(" ");
+        }
+    }
+    printf("\n");
+}
+
+int main()
+{
+    uint8_t reg, pos, len;
+    scanf("%hhx %hhu %hhu", &reg, &pos, &len);
+    
+    uint8_t original_reg = reg; 
+    
+    // Set 1 bit thứ n của reg
+    printf("Set bit %d: ", pos);
+    SET_1BIT(reg, pos);
+    print_bin(reg, 8);
+    
+    // Clear 1 bit thứ n của reg
+    reg = original_reg;
+    printf("Clear bit %d: ", pos);
+    CLEAR_1BIT(reg, pos);
+    print_bin(reg, 8);
+    
+    // Toggle 1 bit thứ n của reg
+    reg = original_reg;
+    printf("Toggle bit %d: ", pos);
+    TOGGLE_1BIT(reg, pos);
+    print_bin(reg, 8);
+    
+    // Set len bit từ bit thứ n của reg
+    reg = original_reg;
+    printf("Set %d bit từ %d: ", len, pos);
+    SET_LEN_BIT(reg, pos, len);
+    print_bin(reg, 8);
+    
+    
+    return 0;
+}
+```
+
 Chúc bạn có những giây phút ôn tập hiệu quả và chinh phục thành công đỉnh cao Lập trình Nhúng! 🖥️🚀
