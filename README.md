@@ -2780,4 +2780,98 @@ int main() {
 }
 ```
 
+### ❓ Câu 12: Bit Spreading Interleave Bits with Zeros
+![alt text](image/image1.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+// Spread bits with 0s between them (interleave into 16-bit)
+uint16_t spread_bits(uint8_t val) {
+    uint16_t result = 0;
+
+    for (int i = 0; i < 8; i++) {
+        uint8_t bit = (val >> i) & 1;           // Extract i-th bit
+        result |= (bit << (2 * i));             // Place in 2*i position
+    }
+
+    return result;
+}
+
+int main() {
+    uint8_t val;
+    scanf("%hhu", &val);
+
+    uint16_t result = spread_bits(val);
+    printf("%u", result);
+    return 0;
+}
+```
+
+### ❓ Câu 13: Macro-Based Register Config Helper
+![alt text](image/image2.png)
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+// Field-setting macros
+#define SET_ENABLE(x)  ((x & 0x01) << 0)   // Bit 0
+#define SET_MODE(x)    ((x & 0x03) << 1)   // Bits 1–2
+#define SET_SPEED(x)   ((x & 0x07) << 3)   // Bits 3–5
+// Reserved bits 6–7 left 0
+
+// Build register using macros
+uint16_t build_register(uint8_t enable, uint8_t mode, uint8_t speed) {
+    uint16_t reg = 0;
+
+    reg |= SET_ENABLE(enable);
+    reg |= SET_MODE(mode);
+    reg |= SET_SPEED(speed);
+
+    return reg;
+}
+
+int main() {
+    uint8_t enable, mode, speed;
+    scanf("%hhu %hhu %hhu", &enable, &mode, &speed);
+
+    uint16_t reg = build_register(enable, mode, speed);
+    printf("%u", reg);
+    return 0;
+}
+```
+
+### ❓ Câu 14: Bitwise Operations-I
+![alt text](image/image3.png)
+![alt text](image/image4.png)
+![alt text](image/image5.png)
+![alt text](image/image6.png)
+![alt text](image-9.png)
+![alt text](image/image7.png)
+![alt text](image-10.png)
+![alt text](image/image8.png)
+![alt text](image/image9.png)
+
+### ❓ Câu 15: Bitwise Operations-II
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-11.png)
+![alt text](image-4.png)
+![alt text](image-12.png)
+![alt text](image-6.png)
+![alt text](image-13.png)
+![alt text](image-8.png)
+
+### ❓ Câu 16: Bitwise Operations-III
+![alt text](image-14.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
+![alt text](image-17.png)
+![alt text](image-18.png)
+![alt text](image-19.png)
+![alt text](image-20.png)
+![alt text](image-21.png)
+
 Chúc bạn có những giây phút ôn tập hiệu quả và chinh phục thành công đỉnh cao Lập trình Nhúng! 🖥️🚀
